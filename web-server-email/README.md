@@ -45,7 +45,7 @@
    ```bash
    timedatectl
    ```
-   ![Timedatectl](assets/ss-time.JPG)
+   ![Timedatectl](assets/ss-waktu.png)
 
 ## Apache 2 + PHP-FM
 
