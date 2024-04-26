@@ -1,9 +1,4 @@
-    Nama            : Dukhaan Kamimpangan
-    NRP             : 3122600003
-    Kelas           : 2 D4 IT A
-    Mata Kuliah     : Workshop Administrasi Jaringan
-    Dosen Pengampu  : Dr. Ferry Astika Saputra S.T., M.Sc
-    Pertemuan       : Minggu 6
+# SETUP WEB SERVER DAN EMAIL SERVER
 
 ## NTP Client
 
@@ -42,7 +37,7 @@
    ```bash
    timedatectl
    ```
-   ![Check](Img/ss-time.jpg)
+   ![Timedatectl](assets/ss-time.JPG)
 
 ## Apache 2 + PHP-FM
 
@@ -67,20 +62,19 @@
    ```bash
    vi /etc/apache2/apache2.conf
     # line 70 : add to specify server name
-    ServerName www. kelompok11.com
+    ServerName www. kelompok4.com
    ```
 
    ```bash
    vi /etc/apache2/sites-enabled/000-default.conf
     # line 11 : change to webmaster's email
-    ServerAdmin webmaster@kelompok11.com
+    ServerAdmin webmaster@kelompok4.com
     systemctl reload apache2
    ```
 
-   <!--
-
-
 3. Melakukan test ke web browser
+
+   ![Test apache](assets/apache2mockup.png)
 
 4. Install PHP 8.2
 
@@ -160,6 +154,8 @@
    ```
 8. Lalu lakukan test di browser
 
+   ![Test php](assets/info.php.png)
+
 ## Database System : MariaDB
 
 1. Lakukan nstalasi Maria DB 10.11
@@ -219,9 +215,9 @@
     # line 82 : uncomment
     mail_owner = postﬁx
     # line 98 : uncomment and specify hostname
-    myhostname = mail.kelompok11.local
+    myhostname = mail.kelompok4.local
     # line 106 : uncomment and specify domainname
-    mydomain = kelompok11.local
+    mydomain = kelompok4.local
     # line 127 : uncomment
     myorigin = $mydomain
     # line 141 : uncomment
@@ -356,9 +352,11 @@
 
 Akan terlihat hasilnyaseperti dibawah, dengan status Server (LISTEN) : MariaDB(MySQL), IMAP, POP3, DNS(domain), IMAPS, POP3S, SSH, Postﬁx (SMTP)
 
+![final cek](assets/net_stat.png)
+
 Melakukan Cek terhadap Layanan Posﬁx
 
-````bash
-telnet mail.kelompok11.local 25
-``` -->
-````
+```bash
+telnet mail.kelompok4.local 25
+```
+
